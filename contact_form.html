@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML Input Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #0002;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label, legend {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="range"]):not([type="file"]):not([type="hidden"]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 7px;
+        }
+
+        input[type="color"] {
+            width: 65px;
+            height: 40px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="file"] {
+            max-width: 100%;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        fieldset {
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 18px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button, input[type="submit"], input[type="reset"], input[type="button"] {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background: #64748b;
+        }
+
+        input[type="button"] {
+            background: #059669;
+        }
+
+        button:hover, input[type="submit"]:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Contact Form</h1>
+    <p class="subtitle">Practice all major HTML input types</p>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <!-- Text -->
+        <div class="form-group">
+            <label for="fullname">Full Name (text)</label>
+            <input type="text" id="fullname" name="fullname"
+                   placeholder="Enter your name" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter password">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"
+                   placeholder="example@gmail.com" required>
+        </div>
+
+        <!-- Telephone -->
+        <div class="form-group">
+            <label for="phone">Telephone</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter phone number">
+        </div>
+
+        <!-- URL -->
+        <div class="form-group">
+            <label for="website">Website URL</label>
+            <input type="url" id="website" name="website"
+                   placeholder="https://example.com">
+        </div>
+
+        <!-- Search -->
+        <div class="form-group">
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search"
+                   placeholder="Search here">
+        </div>
+
+        <!-- Number -->
+        <div class="form-group">
+            <label for="age">Age (number)</label>
+            <input type="number" id="age" name="age"
+                   min="18" max="100" placeholder="Enter age">
+        </div>
+
+        <!-- Date -->
+        <div class="form-group">
+            <label for="date">Preferred Contact Date</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <!-- Time -->
+        <div class="form-group">
+            <label for="time">Preferred Contact Time</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+        <!-- Datetime-local -->
+        <div class="form-group">
+            <label for="meeting">Meeting Date and Time</label>
+            <input type="datetime-local" id="meeting" name="meeting">
+        </div>
+
+        <!-- Month -->
+        <div class="form-group">
+            <label for="month">Preferred Month</label>
+            <input type="month" id="month" name="month">
+        </div>
+
+        <!-- Week -->
+        <div class="form-group">
+            <label for="week">Preferred Week</label>
+            <input type="week" id="week" name="week">
+        </div>
+
+        <!-- Radio -->
+        <fieldset>
+            <legend>Gender (radio)</legend>
+            <div class="option">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="display:inline">Male</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="display:inline">Female</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" style="display:inline">Other</label>
+            </div>
+        </fieldset>
+
+        <!-- Checkbox -->
+        <fieldset>
+            <legend>Interests (checkbox)</legend>
+            <div class="option">
+                <input type="checkbox" id="html" name="interests" value="HTML">
+                <label for="html" style="display:inline">HTML</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="css" name="interests" value="CSS">
+                <label for="css" style="display:inline">CSS</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="js" name="interests" value="JavaScript">
+                <label for="js" style="display:inline">JavaScript</label>
+            </div>
+        </fieldset>
+
+        <!-- Color -->
+        <div class="form-group">
+            <label for="color">Favorite Color</label>
+            <input type="color" id="color" name="color" value="#2563eb">
+        </div>
+
+        <!-- Range -->
+        <div class="form-group">
+            <label for="rating">Satisfaction (range)</label>
+            <input type="range" id="rating" name="rating"
+                   min="0" max="10" value="5">
+        </div>
+
+        <!-- File -->
+        <div class="form-group">
+            <label for="file">Upload File</label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <!-- Hidden -->
+        <input type="hidden" name="form_source" value="contact_page">
+
+        <!-- Message -->
+        <div class="form-group">
+            <label for="message">Message (textarea)</label>
+            <textarea id="message" name="message"
+                      placeholder="Write your message..."></textarea>
+        </div>
+
+        <!-- Select -->
+        <div class="form-group">
+            <label for="subject">Subject (select)</label>
+            <select id="subject" name="subject">
+                <option value="">Select a subject</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="business">Business Inquiry</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <input type="submit" value="Submit Form">
+            <input type="reset" value="Reset Form">
+            <input type="button" value="Normal Button"
+                   onclick="alert('Normal button clicked!')">
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
